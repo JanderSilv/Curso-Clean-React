@@ -1,0 +1,28 @@
+** Clean Architecture **
+
++ Camada de Dominio: Regras de negócio.
+    - Implementar as regras como interfaces.
+    - Ex: Autenticação
+
++ Camada de Dados: Implementação das interfaces da camada de dominio.
+    - Ex: Tratar resposta da API
+    - Possui interfaces para abstrair acoplamentos.
+        . Ex: Criar uma interface chamada HttpPostClient que realiza requisições do tipo post.
+
++ Camada de Infraestrutura: Implementações de pacotes externos
+    - Ex: Comunicar com API
+    - Criar a implementação do HttpPostClient (AxiosHttpClient) utilizando o Axios, Fetch e afins...
+    - A camada de infraestrutura implementa as interfaces da camada de dados
+ 
++ Camada de Apresentação de dados:
+    - Ex: Tela de Login
+    - Busca a camada de dominio para obter os dados a serem apresentados.
+    - Possui interfaces de validadores
+
++ Camada de Validação:
+    - Implementações de validadores de dados
+        . Ex: RequiredFieldValidation e EmailFieldValidation
+
++ Camada Principal:
+    - Ex: LoginFactory
+    - Camada que une todos as outras camadas através de Design Patterns como o Factories e Dependency Injection
