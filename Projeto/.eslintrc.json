@@ -5,8 +5,7 @@
       }
     },
     "extends": [
-      // "standard-with-typescript",
-      "airbnb",
+      "standard-with-typescript",
       "plugin:react/recommended",
       "plugin:cypress/recommended"
     ],
@@ -24,13 +23,9 @@
       "@typescript-eslint/comma-spacing": "off",
       "@typescript-eslint/return-await": "off",
       "@typescript-eslint/no-namespace": "off",
-      "@typescript-eslint/camelcase": "off",
-      "@typescript-eslint/require-await": "off",
       "no-redeclare": "off",
       "import/export": "off",
       "react/jsx-uses-react": "error",
-      "react/jsx-uses-vars": "error",
-      "linebreak-style": ["error", "windows"],
-      "indent": ["error", 4]
+      "react/jsx-uses-vars": "error"
     }
   }
