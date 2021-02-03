@@ -25,4 +25,4 @@
 
 + Camada Principal:
     - Ex: LoginFactory
-    - Camada que une todos as outras camadas através de Design Patterns como o Factories e Dependency Injection
+    - Camada que une todos as outras camadas (DP: Composition Roots) através de Design Patterns como o Factories e Dependency Injection

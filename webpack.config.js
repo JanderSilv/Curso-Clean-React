@@ -10,10 +10,35 @@ module.exports = {
         filename: 'bundle.js'
     },
     resolve: {
-        extensions: ['.ts', '.tsx', '.js'], // extensões utilizadas
+        extensions: ['.ts', '.tsx', '.js', 'scss'], // extensões utilizadas
         alias: {
             '@': path.join(__dirname, 'src') // indica ao webpack como ler os alias imports
         }
+    },
+    module: {
+        rules: [{
+            test: /\.ts(x?)$/,
+            loader: 'ts-loader',
+            exclude: /node_modules/
+        },
+        {
+            test: /\.scss$/,
+            use: [
+            {
+                loader: 'style-loader'
+            },
+            {
+                loader: 'css-loader',
+                options: {
+                    modules: true
+                }
+            },
+            {
+                loader: 'sass-loader'
+            }
+        ]
+        }
+    ]
     },
     devServer: {
         contentBase: './public', // direciona a execução do servidor para a pasta public
