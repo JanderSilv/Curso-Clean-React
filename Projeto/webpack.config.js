@@ -1,5 +1,5 @@
 const path = require('path')
-const { CleanWebPackPlugin } = require('clean-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 module.exports = {
   mode: 'development',
@@ -50,6 +50,6 @@ module.exports = {
     'react-dom': 'ReactDOM'
   },
   plugins: [
-    new CleanWebPackPlugin()
+    new CleanWebpackPlugin()
   ]
 }
